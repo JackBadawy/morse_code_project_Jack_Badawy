@@ -72,6 +72,8 @@
 
 button {
   border-radius: 0;
+  background-color: #b5e2b5;
+  font-weight: 600;
 }
 
 .input {
