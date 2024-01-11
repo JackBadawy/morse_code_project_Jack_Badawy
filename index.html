@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morse Code | Jack Badawy</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer type="module"></script>
+  </head>
+  <body id="bodyEl" class="body">
+    <div class="nav__standin"></div>
+    <nav class="nav">
+      <div id="logoContainer">
+        <img
+          src="./img/jack_logo.png"
+          alt="Jack Badawy"
+          height="48px"
+          class="nav__logo"
+        />
+      </div>
+    </nav>
+    <header id="headerEl" class="body__header"></header>
+    <main id="mainEl" class="body__main">
+      <h1 class="body__header__heading">Morse code translator</h1>
+      <div id="inputBoxContainer" class="body__main__input-box-container">
+        <div class="input-and-btn">
+          <input
+            type="text"
+            placeholder="English to Morse"
+            class="body__main__eng-inp input"
+            id="engInputBox"
+          />
+          <button id="engToMorseBtn" class="body__main__eng-btn">Submit</button>
+        </div>
+
+        <div class="input-and-btn">
+          <input
+            type="text"
+            placeholder="Morse to English"
+            class="body__main__mor-inp input"
+            id="morseInputBox"
+          />
+          <button id="morseToEngBtn" class="body__main__eng-btn">Submit</button>
+        </div>
+      </div>
+      <div class="body__main__result-container">
+        <input
+          type="text"
+          class="body__main__result-container__box"
+          id="resultContainer"
+          readonly
+          contenteditable="true"
+        />
+      </div>
+
+      <div class="info-box" id="infoBox">
+        <h3>Tips</h3>
+        <p>
+          .When entering morse code put one space between letters and two spaces
+          between words
+        </p>
+        <div class="info-box__legend-container" id="legendContainer">
+          <h4 id="legendHeader">legend:</h4>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>*styling TBC</p>
+    </footer>
+  </body>
+</html>
