@@ -40,32 +40,37 @@
             class="body__main__mor-inp input"
             id="morseInputBox"
           />
-          <button id="morseToEngBtn" class="body__main__eng-btn">Submit</button>
+          <button id="morseToEngBtn" class="body__main__eng-btn button">
+            Submit
+          </button>
         </div>
       </div>
       <div class="body__main__result-container">
-        <input
-          type="text"
+        <textarea
           class="body__main__result-container__box"
           id="resultContainer"
+          name="resultContainer"
+          rows="8"
+          cols="10"
           readonly
-          contenteditable="true"
-        />
+        ></textarea>
       </div>
 
       <div class="info-box" id="infoBox">
         <h3>Tips</h3>
-        <p>
-          .When entering morse code put one space between letters and two spaces
-          between words
-        </p>
+        <ul class="info-box-tip" id="tipList">
+          <li class="info-box-tip">
+            When entering morse code put one space between letters and two
+            spaces between words
+          </li>
+        </ul>
         <div class="info-box__legend-container" id="legendContainer">
           <h4 id="legendHeader">legend:</h4>
         </div>
       </div>
     </main>
     <footer>
-      <p>*styling TBC</p>
+      <p>&copy; Jack Badawy 2024</p>
     </footer>
   </body>
 </html>
