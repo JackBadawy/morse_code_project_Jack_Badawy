@@ -46,7 +46,7 @@
   background-color: rgba(216, 184, 110, 0.34);
   font-weight: 700;
   font-size: medium;
-  white-space: normal;
+  white-space: pre;
   resize: none;
 }
 .body__main__result-container__box:focus, .body__main__result-container__box:active {
