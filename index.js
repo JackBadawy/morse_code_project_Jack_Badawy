@@ -16,18 +16,33 @@ addMorseLegend();
 function addMorseLegend() {
   let legendKeys = Object.keys(morseCodeLookup);
   for (let i = 0; i < legendKeys.length; i++) {
-    let legendItemContainer = document.createElement("div");
-    legendItemContainer.className = "info-box__legend-container__item-box";
-    let legendItemTitle = document.createElement("p");
-    let legendItemMorse = document.createElement("p");
-    legendItemTitle.textContent = legendKeys[i];
-    if (legendItemTitle.textContent != ":") {
-      legendItemTitle.textContent += ":";
-    }
-    legendItemContainer.appendChild(legendItemTitle);
-    legendItemMorse.textContent = morseCodeLookup[legendKeys[i]];
-    legendItemContainer.appendChild(legendItemMorse);
-    legendContainer.appendChild(legendItemContainer);
+      let legendItemContainer = document.createElement("div");
+      legendItemContainer.className = "info-box__legend-container__item-box";
+      let legendItemTitle = document.createElement("p");
+      let legendItemMorse = document.createElement("p");
+      legendItemTitle.textContent = legendKeys[i];
+      if (legendItemTitle.textContent != ":") {
+          legendItemTitle.textContent += ":";
+      }
+      legendItemContainer.appendChild(legendItemTitle);
+      legendItemMorse.textContent = morseCodeLookup[legendKeys[i]];
+      if (legendItemTitle.textContent != ":SPACE:") {
+        legendItemContainer.appendChild(legendItemMorse)
+      } else {
+        legendItemContainer.id = "space"
+      }
+      legendContainer.appendChild(legendItemContainer);
+
+      
+      legendItemContainer.addEventListener('click', function() {
+          let currentValue = morseInputBox.value;
+          
+          if (currentValue && !currentValue.endsWith(' ')) {
+              currentValue += ' ';
+          }
+          morseInputBox.value = currentValue + morseCodeLookup[legendKeys[i]] + ' ';
+      });
+      legendItemContainer.style.cursor = 'pointer';
   }
 }
 

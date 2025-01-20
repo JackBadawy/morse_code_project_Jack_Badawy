@@ -39,14 +39,14 @@
 }
 .body__main__result-container__box {
   width: 424px;
-  min-height: 16px;
+  min-height: 144px;
   padding: 0;
   border: 0;
   text-wrap: wrap;
   background-color: rgba(216, 184, 110, 0.34);
   font-weight: 700;
   font-size: medium;
-  white-space: pre;
+  white-space: pre-wrap;
   resize: none;
 }
 .body__main__result-container__box:focus, .body__main__result-container__box:active {
@@ -71,9 +71,17 @@
   margin-right: 8rem;
 }
 .info-box__legend-container__item-box {
-  background-color: rgba(160, 160, 160, 0.192);
+  background-color: rgba(160, 160, 160, 0.2);
   min-width: 40px;
   font-weight: 700;
+}
+.info-box__legend-container__item-box:hover {
+  background-color: rgba(160, 160, 160, 0.3);
+}
+
+#space {
+  display: flex;
+  align-items: center;
 }
 
 #legendHeader {
